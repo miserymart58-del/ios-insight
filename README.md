@@ -21,20 +21,22 @@ iOS Insight helps iPhone owners understand device health, reported app storage, 
 - Local JSON/HTML diagnostic reports.
 - Optional local-backup forensics with Amnesty International's Mobile Verification Toolkit (MVT).
 
-## Interface
-
-The desktop workspace is organised into Overview, Apps & Cleanup, Storage Explorer, Security Center, Performance Lab, and Backup & Forensics.
-
 ## Windows quick start
 
 1. Install Python 3.10+ from https://www.python.org/downloads/.
 2. Install Apple device support using Apple Devices or a supported iTunes installation.
-3. Download and extract the complete source package from this repository.
+3. Extract the full source archive supplied with this project.
 4. Connect the iPhone using a USB data cable, unlock it, and approve Trust This Computer.
-5. Run the Windows launcher included in the extracted package.
+5. Run the Windows launcher included in the extracted project.
 6. Select Refresh USB, choose the device, and start the read-only scan.
 
 No wireless debugging or jailbreak is required.
+
+## Import the supplied source ZIP into this repository
+
+The repository includes [PUBLISH_SOURCE_TO_GITHUB.bat](PUBLISH_SOURCE_TO_GITHUB.bat) for Windows. Download that script, place it beside the supplied `ios-insight-full-usb(1).zip` file, and double-click it (or drag the ZIP onto the BAT file). It uses your own Git for Windows sign-in to clone this repository, extract the source archive, create a commit, and push it to `main`.
+
+You can instead run the script with the archive path as its first argument. Review the files before pushing; the script excludes Git metadata, virtual environments, and Python cache files.
 
 ## Safety and iOS limitations
 
@@ -60,7 +62,7 @@ See the documentation in docs/ for scan coverage, architecture, cleanup guidance
 
 ## Development
 
-The source package includes the application, tests, Windows launcher, dependency metadata, GitHub Actions workflow, issue templates, architecture documentation, contribution guidelines, security policy and MIT license.
+The source archive includes the application, tests, Windows launcher, dependency metadata, architecture documentation, contribution guidelines, security policy and MIT license.
 
 Run the test suite with pytest after installing the development dependencies. See docs/DEVELOPMENT.md for setup.
 
